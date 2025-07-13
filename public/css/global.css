@@ -1,0 +1,68 @@
+* { margin: 0; padding: 0; list-style: none; text-decoration: none; box-sizing: border-box; color: inherit; font-family: "SF Pro"; }
+
+:root {
+    --most-light: rgba(107, 129, 45, 0.05);
+    --little-dark: rgba(107, 129, 45, 0.50);
+    --point-color: rgba(142, 160, 96, 1);
+}
+
+.container {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 393px;
+
+    margin: 0 auto;
+}
+
+/* components */
+
+header {
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    align-items: end;
+
+    width: 100%;
+    max-width: 393px;
+    height: 106px;
+    padding: 17.5px;
+
+    box-shadow: 0px 2.5px 5px 0px rgba(0, 0, 0, 0.13);
+    backdrop-filter: blur(25px);
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+main {
+    margin-top: 106px;
+    margin-bottom: 88px;
+    padding: 25px 17.5px;
+}
+
+.tab-bar {
+    position: fixed;
+    bottom: 0;
+
+    width: 100%;
+    max-width: 393px;
+
+    box-shadow: 0px -2.5px 5px 0px rgba(0, 0, 0, 0.13);
+    backdrop-filter: blur(25px);
+    background: rgba(255, 255, 255, 0.75);
+    padding-top: 7px;
+    padding-bottom: 36px;
+}
+
+.tab-bar ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab-bar img {
+    filter: grayscale(100%);
+}

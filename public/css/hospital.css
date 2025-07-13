@@ -1,0 +1,128 @@
+:root{
+    --little-dark: rgba(107, 129, 45, 0.5);
+    --point-color: rgb(142, 160, 96);
+    --gray: rgba(0, 0, 0, 0.25);
+    --most-bright: rgba(107, 129, 45, 0.05);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: inherit;
+}
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 700;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+
+main {
+    width: 100%;
+}
+
+main>p{
+    font-family: "San Francisco";
+    font-weight: 700;
+    font-size: 32px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#hospital-list{
+    list-style: none;
+    width: 100%;
+}
+
+#hospital-list>li{
+    width: 100%;
+    height: 95px;
+    margin: 0;
+    padding: 12.5px;
+    position: relative;
+}
+
+#hospital-list>li span{
+    font-family: "San Francisco";
+    font-size: 14px;
+}
+
+#hospital-list>li>span{
+    display: flex;
+    flex-direction: column;
+    gap: 7.5px;
+}
+
+.address, .separate{
+    color: var(--little-dark);
+    font-weight: 400;
+}
+
+.distance{
+    color: var(--point-color);
+    font-weight: 700;
+}
+
+.name{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#hospital-list>li button{
+    width: 42px;
+    height: 42.5px;
+    border: none;
+    background-color: var(--point-color);
+    border-radius: 0 21px 21px;
+    position: absolute;
+    bottom: 12.5px;
+    right: 12.5px;
+    cursor: pointer;
+}
+
+#hospital-list li:nth-child(1){
+    border-radius: 7.5px 7.5px 0 0;
+    border-top: 1.5px solid var(--little-dark);
+}
+
+/* hospital-list 내 li 요소에 적용 */
+#hospital-list li:nth-child(odd) {
+    background-color: var(--most-bright); /* 홀수 번째 li의 배경색 (연한 회색 예시) */
+    border-left: 1.5px solid var(--little-dark);
+    border-right: 1.5px solid var(--little-dark);
+}
+
+#hospital-list li:nth-child(even) {
+    border-left: 1.5px solid var(--gray);
+    border-right: 1.5px solid var(--gray);
+}
+
+#hospital-list li:nth-child(10){
+    border-radius: 0 0 7.5px 7.5px;
+    border-bottom: 1.5px solid var(--little-dark);
+}
+
+.flex{
+    display: flex;
+    gap: 12.5px;
+}
+
+.type{
+    font-family: "San Francisco";
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--little-dark);
+}
+
+.flex-row {
+    display: flex;
+    gap: 7.5px;
+}
+
+.tab-bar li:nth-child(2) img {
+    filter: grayscale(0) !important;
+}
